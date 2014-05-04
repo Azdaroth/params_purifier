@@ -1,6 +1,6 @@
 # ParamsPurifier
 
-TODO: Write a gem description
+Have you ever had problems with multiple select and empty strings being sent in array params? (see [discussion](http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select-using-an-embedde/)). Now you can easily solve that problem by using ParamsPurifier!
 
 ## Installation
 
@@ -18,7 +18,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just include ParamsPurifier::Purifiable module in your controller (e.g. ApplicationController):
+
+``` ruby
+class ApplicationController < ActionController::Base
+
+  include ParamsPurifier::Purifiable
+
+end
+```
+
+And that's it! You have an access to "purified" params by purified_params method. Works with Strong Parameters by default (it returns an instance of ActionController::Parameters):
+
+``` ruby
+def user_params
+  purified_params.require(:user).permit(:email, :password, :password_confirmation)
+end
+```
+
 
 ## Contributing
 
