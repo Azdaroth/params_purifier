@@ -2,6 +2,14 @@
 
 Have you ever had problems with multiple select and empty strings being sent in array params? (see [discussion](http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select-using-an-embedde/)). Now you can easily solve that problem by using ParamsPurifier!
 
+[![Build Status](https://travis-ci.org/Azdaroth/params_purifier.svg)](https://travis-ci.org/Azdaroth/params_purifier)
+
+[![Gem Version](https://badge.fury.io/rb/params_purifier.svg)](http://badge.fury.io/rb/params_purifier)
+
+[![Coverage Status](https://coveralls.io/repos/Azdaroth/params_purifier/badge.png?branch=master)](https://coveralls.io/r/Azdaroth/params_purifier?branch=master)
+
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
